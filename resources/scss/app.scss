@@ -1,1 +1,33 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
+
+.my-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        margin: 1rem 0 3rem;
+    }
+}
+tr{
+        
+    text-align: center;
+    th,td{
+        padding: 1rem .5rem 0;
+
+    }
+
+}
+tbody{
+    tr{
+        border-bottom: 1px solid lightgrey;
+        .fa-check{
+            color: lighten($color: green, $amount: 30);
+        }
+        .fa-xmark{
+            color: orangered;
+        }
+    }
+}
