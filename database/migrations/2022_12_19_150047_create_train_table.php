@@ -13,13 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('train', function (Blueprint $table) {
-            $table->id();
+        Schema::create('trains', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->string('company');
             $table->string('leaving_from');
             $table->string('arriving_to');
-            $table->timestamps('leaving_time');
-            $table->timestamps('arriving_time');
+            $table->time('leaving_time');
+            $table->time('arriving_time');
+            $table->date('day_of_leaving');
             $table->bigInteger('train_code')->unique();
             $table->integer('wagons_num')->nullable();
             $table->boolean('on_time');
